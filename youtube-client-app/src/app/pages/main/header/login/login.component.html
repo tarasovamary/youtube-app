@@ -1,0 +1,24 @@
+<div class="header__login">
+  <span class="header__login_title"
+  *ngIf = !isLogged>
+        Your Name
+  </span>
+  <span class="header__login_title"
+        *ngIf = isLogged>
+        {{name}}
+  </span>
+
+    <img class="header__login_img" src="./assets/images/profile.png"
+         alt="Profile">
+
+  <button class="logout_btn btn"
+          (click)="logoutUser()"
+          *ngIf = isLogged>
+      Logout
+  </button>
+  <button class="logout_btn btn"
+          *ngIf = !isLogged
+          [routerLink]="['/login']">
+      Login
+  </button>
+</div>

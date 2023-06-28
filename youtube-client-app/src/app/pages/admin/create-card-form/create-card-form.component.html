@@ -1,0 +1,69 @@
+<form class="create-card_form"
+      [formGroup]="cardForm"
+      (ngSubmit)="onSubmit()">
+  <legend class="create-card_title">Create new Card</legend>
+
+  <mat-form-field class="title_field">
+    <mat-label>Title</mat-label>
+    <input matInput formControlName="title">
+      <mat-error *ngIf="cardForm.get('title')!.hasError('required')">
+        Title is <strong>required</strong>
+      </mat-error>
+      <mat-error *ngIf="cardForm.get('title')!.hasError('minlength')">
+        Title must be at least <strong>3 characters long</strong>
+      </mat-error>
+      <mat-error *ngIf="cardForm.get('title')!.hasError('maxlength')">
+        Title cannot be more than <strong>20 characters long</strong>
+      </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="title_field">
+    <mat-label>Description</mat-label>
+    <textarea matInput #message maxlength="256" formControlName="description"></textarea>
+    <mat-error align="start" *ngIf="cardForm.get('description')!.hasError('maxlength')">
+      Description is too long
+    </mat-error>
+    <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+  </mat-form-field>
+
+  <mat-form-field class="title_field">
+    <mat-label>Image Link</mat-label>
+    <input matInput formControlName="image">
+      <mat-error *ngIf="cardForm.get('image')!.hasError('required')">
+        Link Image is <strong>required</strong>
+      </mat-error>
+      <mat-error *ngIf="cardForm.get('image')!.hasError('pattern')">
+        Please enter a valid link
+      </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="title_field">
+    <mat-label>Video Link</mat-label>
+    <input matInput formControlName="video">
+    <mat-error *ngIf="cardForm.get('video')!.hasError('required')">
+      Link Video is <strong>required</strong>
+    </mat-error>
+    <mat-error *ngIf="cardForm.get('video')!.hasError('pattern')">
+      Please enter a valid link
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="title_field">
+    <mat-label>Creation Date</mat-label>
+    <input matInput placeholder="Ex. 31/12/2021" formControlName="date">
+    <mat-error *ngIf="cardForm.get('date')!.hasError('required')">
+      Creation Date is <strong>required</strong>
+    </mat-error>
+    <mat-error *ngIf="cardForm.get('date')!.hasError('pattern')">
+      Please enter a valid date
+    </mat-error>
+  </mat-form-field>
+
+  <div class="wrap">
+    <button class="create-card_btn btn"
+            [disabled]="!cardForm.valid">
+      Create
+    </button>
+  </div>
+</form>
+

@@ -1,0 +1,9 @@
+<form action="" class="header__search_bar">
+  <input
+  class="header__search_input"
+  type="text" placeholder="What are you want to find out?"
+  name="search"
+  autocomplete="off"
+  [(ngModel)]="requestValue"
+  (ngModelChange)="setRequestValue(requestValue)">
+</form>

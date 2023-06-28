@@ -1,0 +1,19 @@
+.item-info_list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 20px 0;
+  gap: 5px;
+  li {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    gap: 3px;
+
+    span {
+      padding-top: 4px;
+    }
+  }
+}

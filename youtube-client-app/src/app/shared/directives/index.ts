@@ -1,0 +1,1 @@
+export * from './colored-border/colored-border.directive';

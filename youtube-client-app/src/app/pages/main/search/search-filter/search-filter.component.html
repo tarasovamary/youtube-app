@@ -1,0 +1,33 @@
+<mat-expansion-panel hideToggle [(expanded)]="openStatus">
+
+  <div class="filter__container wrapper">
+    <span class="filter__title">Sorting by:</span>
+
+    <div class="filter_item"
+    [class.active] = "sortByValue === 'date'"
+    (click) = "changeSortState('date')">
+        date
+    </div>
+
+    <div class="filter_item"
+    [class.active] = "sortByValue === 'viewCount'"
+    (click) = "changeSortState('viewCount')">
+      count of views
+    </div>
+
+    <form class="filter__form">
+      <span>
+      by word or sentance:
+      </span>
+
+      <input type="text"
+      class="filter_input"
+      name="filter"
+      autocomplete="off"
+      [(ngModel)]="filterValue"
+      (ngModelChange)="getInput()">
+    </form>
+
+  </div>
+
+</mat-expansion-panel>

@@ -1,0 +1,37 @@
+<div class="details_item">
+  <div class="details_img">
+    <img 
+      [src]="card.thumbnailUrlHigh"
+      [alt]="card.title"
+      width="480">
+  </div>
+
+  <div class="details_info"
+       [appColoredBorder]="card.publishedAt">
+    <div class="info_content">
+      <span class="info_title">{{card.title}}</span>
+      <span class="info_date">{{card.publishedAt | date:"fullDate"}}</span>
+    </div>
+    <p class="decription_title">Description:</p>
+    <div class="details_decription">
+      <span class="decription_content">
+        {{card.description}}
+      </span>
+    </div>
+    
+    
+    <app-item-info
+     [card] = "card"
+     [viewCount]="card.viewCount"
+     [likeCount]="card.likeCount"
+     [commentCount]="card.commentCount">
+    </app-item-info>
+  
+    <div class="back_btn"
+         [routerLink]="['/main']">
+      <img [src]="backImageUrl"
+           alt="Back"
+           width="40px">
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<app-search-filter
+  [openStatus]="openStatus"
+  (changeSortStateEvent)="changeSortState($event)"
+  (getInputEvent)="getInput($event)"
+  >
+</app-search-filter>
+<app-search-results
+  [cards$]="cards$"
+  [showCards]="showCards"
+  [filterValue]="filterValue"
+  [sortState]="sortState"
+  [sortByValue]="sortByValue">
+</app-search-results>

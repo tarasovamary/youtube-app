@@ -1,0 +1,31 @@
+.header__search_bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .header__search_input {
+    background: #EFEFEF;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    width: 396px;
+    height: 30px;
+    padding: 8px 5px 8px 19px;
+    box-shadow: 0px 4px 4px rgba(163, 163, 163, 0.25);
+  }
+
+  .header__search_btn {
+    margin-left: 10px;
+  }
+}
+
+  .btn {
+    background: #F2F63C;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 30px;
+    box-shadow: 0px 4px 4px rgba(163, 163, 163, 0.25);
+    cursor: pointer;
+  }
+

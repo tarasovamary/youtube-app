@@ -1,0 +1,25 @@
+<div class="search-item" 
+     [appColoredBorder]="card.publishedAt">
+
+  <img class="search-item_img"
+       [src]="card.thumbnailUrlMedium"
+       [alt]="card.title"
+       width="223"
+       height="123">
+
+  <app-item-info 
+    [card] = "card"
+    [viewCount]="card.viewCount"
+    [likeCount]="card.likeCount"
+    [commentCount]="card.commentCount">
+  </app-item-info>
+
+  <span class="search-item_title">
+    {{card.title}}
+  </span>
+
+  <button class="search-item_btn btn"
+          [routerLink]="['details', card.id]">
+    More...
+  </button>
+</div>

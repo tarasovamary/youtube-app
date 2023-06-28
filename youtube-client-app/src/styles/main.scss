@@ -1,0 +1,27 @@
+//Base
+@import './base/normalize.scss';
+
+//Helpers
+@import './helpers/mixins.scss';
+
+//App Component
+@import '../app/app.component.scss';
+
+//Header Components
+@import '../app/pages/main/header/header.component.scss';
+@import '../app/pages/main/header/search-input/search-input.component.scss';
+@import '../app/pages/main/header/login/login.component.scss';
+
+//Search Components
+@import '../app/pages/main/search/search-filter/search-filter.component.scss';
+@import '../app/pages/main/search/search-item/search-item.component.scss';
+@import '../app/pages/main/search/search-results/search-results.component.scss';
+
+//Shared Components
+@import '../app/shared/components/item-info/item-info.component.scss';
+
+//Not found
+@import '../app/shared/components/not-found/not-found.component.scss';
+
+//Details
+@import '../app/pages/details/details.component.scss';

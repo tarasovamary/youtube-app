@@ -1,0 +1,9 @@
+    <div class="cards wrapper" *ngIf="showCards">
+      <app-search-item 
+      *ngFor="let card of (cards$ | async)!
+        | filter: filterValue
+        | sort: sortState : sortByValue"
+      [card] = "card">
+      </app-search-item>
+    </div>
+    

@@ -1,0 +1,37 @@
+.filter__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 21px;
+  padding-top: 16px;
+  color: #929292;
+
+  .filter_input {
+    border: 0;
+    max-width: 149px;
+    outline: none;
+  }
+
+  .filter_item {
+    text-align: center;
+    &:hover {
+      transition: all 0.8s ease;
+      color: #000000;
+      text-shadow: 1px 1px 2px #F2F63C;
+      cursor: pointer;
+    }
+  }
+
+  .filter__form {
+    text-align: center;
+  }
+
+  .filter__title {
+    min-width: 82px;
+  }
+}
+
+mat-expansion-panel {
+  background-color: #E5E5E5;
+}
+

@@ -1,0 +1,29 @@
+ <div class="header__color">
+   <div class="header wrapper">
+     <a class="header__logo" href="#">
+       <img class="logo_img"
+            src="./assets/images/logo.svg"
+            alt="Logo">
+     </a>
+
+     <div class="search__panel">
+       <app-search-input
+       (requestSearchEvent)="setRequestValue($event)">
+      </app-search-input>
+
+      <button class="header__filter_btn"
+              (click)="showFilterPanel()">
+        <img src="./assets/images/settings.png"
+             alt="Filter"
+             width="48"
+             height="48">
+      </button>
+      
+     </div>
+      <app-login
+        [isLogged]="isLogged"
+        [name]="name"
+        (logoutEvent)="logoutUser()">
+      </app-login>
+   </div> 
+ </div>

@@ -1,0 +1,24 @@
+.header__color {
+  background-color: #E5E5E5;
+  border-bottom: 3px solid #F2F63C;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 80px;
+
+  .search__panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .header__filter_btn {
+      background: transparent;
+      cursor: pointer;
+      padding: 5px 0 0;
+      border: 0;
+    }
+  }
+}
